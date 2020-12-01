@@ -116,7 +116,7 @@ CREATE TABLE "Growing_Countries_Exports"
     "2016" INT NOT NULL,
     "2017" INT NOT NULL,
     "2018" INT NOT NULL,
-    "Producer" VARCHAR(30) NOT NULL
+    "Country" VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE "Import_Countries_Consumption"
@@ -215,7 +215,7 @@ CREATE TABLE "Import_Countries_Inventory"
     "2016" INT,
     "2017" INT,
     "2018" INT,
-    "Holding_Entity" VARCHAR(30) NOT NULL
+    "Country" VARCHAR(30) NOT NULL
 );
 
 ALTER TABLE "Coffee_Farms_Quality" ADD CONSTRAINT "fk_Coffee_Farms_Quality_Country" FOREIGN KEY("Country")
