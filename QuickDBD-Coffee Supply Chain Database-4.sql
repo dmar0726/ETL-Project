@@ -1,7 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/7caRSp
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
+drop table if exists "Import_Countries_Consumption", "Countries", "Coffee_Farms_Quality", "US_Coffee_Imports", "Growing_Countries_Consumption", "Growing_Countries_Exports", "Import_Countries_Total_Import", "Import_Countries_Inventory";
 
 CREATE TABLE "Countries"
 (
@@ -121,100 +118,101 @@ CREATE TABLE "Growing_Countries_Exports"
 
 CREATE TABLE "Import_Countries_Consumption"
 (
-    "1990" INT,
-    "1991" INT,
-    "1993" INT,
-    "1994" INT,
-    "1995" INT,
-    "1996" INT,
-    "1997" INT,
-    "1998" INT,
-    "1999" INT,
-    "2000" INT,
-    "2001" INT,
-    "2002" INT,
-    "2003" INT,
-    "2004" INT,
-    "2005" INT,
-    "2006" INT,
-    "2007" INT,
-    "2008" INT,
-    "2009" INT,
-    "2010" INT,
-    "2011" INT,
-    "2012" INT,
-    "2013" INT,
-    "2014" INT,
-    "2015" INT,
-    "2016" INT,
-    "2017" INT,
-    "2018" INT,
+    "1990" INT NOT NULL,
+    "1991" INT NOT NULL,
+    "1993" INT NOT NULL,
+    "1994" INT NOT NULL,
+    "1995" INT NOT NULL,
+    "1996" INT NOT NULL,
+    "1997" INT NOT NULL,
+    "1998" INT NOT NULL,
+    "1999" INT NOT NULL,
+    "2000" INT NOT NULL,
+    "2001" INT NOT NULL,
+    "2002" INT NOT NULL,
+    "2003" INT NOT NULL,
+    "2004" INT NOT NULL,
+    "2005" INT NOT NULL,
+    "2006" INT NOT NULL,
+    "2007" INT NOT NULL,
+    "2008" INT NOT NULL,
+    "2009" INT NOT NULL,
+    "2010" INT NOT NULL,
+    "2011" INT NOT NULL,
+    "2012" INT NOT NULL,
+    "2013" INT NOT NULL,
+    "2014" INT NOT NULL,
+    "2015" INT NOT NULL,
+    "2016" INT NOT NULL,
+    "2017" INT NOT NULL,
+    "2018" INT NOT NULL,
     "Country" VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE "Import_Countries_Total_Import"
 (
-    "1990" INT,
-    "1991" INT,
-    "1993" INT,
-    "1994" INT,
-    "1995" INT,
-    "1996" INT,
-    "1997" INT,
-    "1998" INT,
-    "1999" INT,
-    "2000" INT,
-    "2001" INT,
-    "2002" INT,
-    "2003" INT,
-    "2004" INT,
-    "2005" INT,
-    "2006" INT,
-    "2007" INT,
-    "2008" INT,
-    "2009" INT,
-    "2010" INT,
-    "2011" INT,
-    "2012" INT,
-    "2013" INT,
-    "2014" INT,
-    "2015" INT,
-    "2016" INT,
-    "2017" INT,
-    "2018" INT,
+    "1990" INT NOT NULL,
+    "1991" INT NOT NULL,
+	"1992" INT NOT NULL,
+    "1993" INT NOT NULL,
+    "1994" INT NOT NULL,
+    "1995" INT NOT NULL,
+    "1996" INT NOT NULL,
+    "1997" INT NOT NULL,
+    "1998" INT NOT NULL,
+    "1999" INT NOT NULL,
+    "2000" INT NOT NULL,
+    "2001" INT NOT NULL,
+    "2002" INT NOT NULL,
+    "2003" INT NOT NULL,
+    "2004" INT NOT NULL,
+    "2005" INT NOT NULL,
+    "2006" INT NOT NULL,
+    "2007" INT NOT NULL,
+    "2008" INT NOT NULL,
+    "2009" INT NOT NULL,
+    "2010" INT NOT NULL,
+    "2011" INT NOT NULL,
+    "2012" INT NOT NULL,
+    "2013" INT NOT NULL,
+    "2014" INT NOT NULL,
+    "2015" INT NOT NULL,
+    "2016" INT NOT NULL,
+    "2017" INT NOT NULL,
+    "2018" INT NOT NULL,
     "Country" VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE "Import_Countries_Inventory"
 (
-    "1990" INT,
-    "1991" INT,
-    "1993" INT,
-    "1994" INT,
-    "1995" INT,
-    "1996" INT,
-    "1997" INT,
-    "1998" INT,
-    "1999" INT,
-    "2000" INT,
-    "2001" INT,
-    "2002" INT,
-    "2003" INT,
-    "2004" INT,
-    "2005" INT,
-    "2006" INT,
-    "2007" INT,
-    "2008" INT,
-    "2009" INT,
-    "2010" INT,
-    "2011" INT,
-    "2012" INT,
-    "2013" INT,
-    "2014" INT,
-    "2015" INT,
-    "2016" INT,
-    "2017" INT,
-    "2018" INT,
+    "1990" INT NOT NULL,
+    "1991" INT NOT NULL,
+    "1993" INT NOT NULL,
+    "1994" INT NOT NULL,
+    "1995" INT NOT NULL,
+    "1996" INT NOT NULL,
+    "1997" INT NOT NULL,
+    "1998" INT NOT NULL,
+    "1999" INT NOT NULL,
+    "2000" INT NOT NULL,
+    "2001" INT NOT NULL,
+    "2002" INT NOT NULL,
+    "2003" INT NOT NULL,
+    "2004" INT NOT NULL,
+    "2005" INT NOT NULL,
+    "2006" INT NOT NULL,
+    "2007" INT NOT NULL,
+    "2008" INT NOT NULL,
+    "2009" INT NOT NULL,
+    "2010" INT NOT NULL,
+    "2011" INT NOT NULL,
+    "2012" INT NOT NULL,
+    "2013" INT NOT NULL,
+    "2014" INT NOT NULL,
+    "2015" INT NOT NULL,
+    "2016" INT NOT NULL,
+    "2017" INT NOT NULL,
+    "2018" INT NOT NULL,
     "Country" VARCHAR(30) NOT NULL
 );
 
@@ -227,7 +225,7 @@ REFERENCES "Countries" ("Country_Name");
 ALTER TABLE "Growing_Countries_Consumption" ADD CONSTRAINT "fk_Growing_Countries_Consumption_Country" FOREIGN KEY("Country")
 REFERENCES "Countries" ("Country_Name");
 
-ALTER TABLE "Growing_Countries_Exports" ADD CONSTRAINT "fk_Growing_Countries_Exports_Producer" FOREIGN KEY("Producer")
+ALTER TABLE "Growing_Countries_Exports" ADD CONSTRAINT "fk_Growing_Countries_Exports_Producer" FOREIGN KEY("Country")
 REFERENCES "Countries" ("Country_Name");
 
 ALTER TABLE "Import_Countries_Consumption" ADD CONSTRAINT "fk_Import_Countries_Consumption_Country" FOREIGN KEY("Country")
@@ -236,6 +234,5 @@ REFERENCES "Countries" ("Country_Name");
 ALTER TABLE "Import_Countries_Total_Import" ADD CONSTRAINT "fk_Import_Countries_Total_Import_Country" FOREIGN KEY("Country")
 REFERENCES "Countries" ("Country_Name");
 
-ALTER TABLE "Import_Countries_Inventory" ADD CONSTRAINT "fk_Import_Countries_Inventory_Holding_Entity" FOREIGN KEY("Holding_Entity")
+ALTER TABLE "Import_Countries_Inventory" ADD CONSTRAINT "fk_Import_Countries_Inventory_Holding_Entity" FOREIGN KEY("Country")
 REFERENCES "Countries" ("Country_Name");
-
