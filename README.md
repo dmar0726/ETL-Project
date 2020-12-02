@@ -70,3 +70,17 @@ Constructed ERD of the 8 final CSV tables.
       PSD_Coffee_Data_transformed_FINAL.csv (Not used)
 4. Modified QuickDBD-Coffee Supply Chain Database-4.sql to create final PostgreSQL (Coffee_db.sql).
 5. Created jupyter notebook (to_SQL.ipynb) to load all 8 cleaned csv files to SQL (see Table below).
+
+
+# Table Schema Name -> CSV File Name
+  Countries -> country_codes.csv
+  Coffee_Farms_Quality -> Coffee_Quality_Final.csv
+  Growing_Countries_Consumption -> domestic_consumption_ico_clean.csv
+  Growing_Countries_Exports -> exports_ico_clean.csv
+  Import_Countries_Total_Import -> imports_ico.csv
+  Import_Countries_Inventory -> inventories_ico.csv
+  Import_Countries_Consumption -> import_consumption.csv
+  US_Coffee_Imports -> Coffee_Data_df_FINAL.csv
+
+
+
